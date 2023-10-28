@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <Nullable>disable</Nullable>
+    </PropertyGroup>
+    <Import Project="../build/Avalonia.props" />
+    <ItemGroup>
+        <AvaloniaResource Include="Resources/**" />
+    </ItemGroup>
+</Project>

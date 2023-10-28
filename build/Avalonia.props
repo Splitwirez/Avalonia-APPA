@@ -1,0 +1,8 @@
+<Project>
+	<PropertyGroup>
+		<AvVer>11.0.5</AvVer>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Avalonia" Version="$(AvVer)" />
+	</ItemGroup>
+</Project>

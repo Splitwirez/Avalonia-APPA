@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+        <Nullable>disable</Nullable>
+    </PropertyGroup>
+    <ItemGroup>
+        <AvaloniaResource Include="Assets/**" />
+        <Compile Include="../LHCustomAurora.Avalonia/Util/ColorHelper.cs" />
+    </ItemGroup>
+    <Import Project="../build/Avalonia.props" />
+    <ItemGroup>
+        <PackageReference Include="Avalonia.Desktop" Version="$(AvVer)" />
+        <PackageReference Include="Avalonia.Diagnostics" Version="$(AvVer)" />
+        <PackageReference Include="Avalonia.ReactiveUI" Version="$(AvVer)" />
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="$(AvVer)" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="../LHCustomAurora.Avalonia/LHCustomAurora.Avalonia.csproj" />
+    </ItemGroup>
+</Project>

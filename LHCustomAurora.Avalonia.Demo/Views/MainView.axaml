@@ -1,0 +1,45 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:LHCustomAurora.Avalonia.Demo.ViewModels"
+        xmlns:appa="using:LHCustomAurora.Avalonia"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="LHCustomAurora.Avalonia.Demo.Views.MainView">
+    <Design.DataContext>
+        <vm:MainViewModel />
+    </Design.DataContext>
+    <DockPanel>
+		<Grid DockPanel.Dock="Bottom"
+                VerticalAlignment="Center"
+                ColumnDefinitions="Auto,*,Auto"
+                RowDefinitions="Auto,Auto"
+                Margin="24,12,24,24">
+
+            <TextBlock Text="Hue:" Grid.Column="0" Grid.Row="0"/>
+
+			<NumericUpDown x:Name="HueSpeen"
+                            Minimum="0"
+                            Maximum="360"
+                            Value="{Binding Hue, Mode=TwoWay}"
+                            Grid.Column="2"
+                            Grid.Row="0" />
+			<StackPanel Orientation="Vertical"
+                        Margin="0,12,0,0"
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Grid.ColumnSpan="3">
+				<Border Background="{DynamicResource HueGradient}"
+                        Height="52"
+                        Margin="0,0,0,-28"/>
+				<Slider x:Name="HueSlider"
+                        Minimum="{Binding #HueSpeen.Minimum, Mode=OneWay}"
+                        Maximum="{Binding #HueSpeen.Maximum, Mode=OneWay}"
+                        Value="{Binding Hue, Mode=TwoWay}"
+                        IsSnapToTickEnabled="True"
+                        TickFrequency="1" />
+			</StackPanel>
+		</Grid>
+        <appa:Aurora Hue="{Binding Hue, Mode=OneWay}" />
+    </DockPanel>
+</UserControl>

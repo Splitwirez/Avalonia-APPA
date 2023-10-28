@@ -1,0 +1,12 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:v="using:LHCustomAurora.Avalonia.Demo.Views"
+        xmlns:vm="using:LHCustomAurora.Avalonia.Demo.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Width="1024" Height="304"
+        MinHeight="154"
+        x:Class="LHCustomAurora.Avalonia.Demo.Views.MainWindow"
+        Title="Avalonia Animated Preview Pane Aurora">
+    <v:MainView />
+</Window>
